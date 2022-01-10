@@ -10,7 +10,8 @@
   "author": "Gustavo Mazzino",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "node": "^17.3.0"
   },
   "engines" :{
     "node": "^17.3.0"
