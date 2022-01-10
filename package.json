@@ -4,7 +4,8 @@
   "description": "TP Clase 6 - Servidroes web",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "author": "Gustavo Mazzino",
   "license": "ISC",
