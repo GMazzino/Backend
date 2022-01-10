@@ -9,16 +9,17 @@ app.get("/",(req, res) => {
 });
 
 app.get("/productoRandom", (req,res) => {
-    new Contenedor("./productos.txt").getAll().then(promiseResolve => {
+    new Contenedor("./productos.txt").getAll()
+        .then(promiseResolve => {
             let indice = Math.floor(Math.random() * promiseResolve.length);
-            res.send(promiseResolve[indice]);
+            res.send(promiseResolve[indice]);})
+        .catch((error) => console.error(error.message));
     });
-});
 
 app.get("/productos", (req,res) => {
-    const contenedor = new Contenedor("./productos.txt");    
-    contenedor.getAll().then(promiseResolve => res.send({
-                                productos: promiseResolve}));
+    new Contenedor("./productos.txt").getAll()
+        .then(promiseResolve => res.send({productos: promiseResolve}))
+        .catch((error) => console.error(error.message));
 });
 
 const server = app.listen(PORT, () => {
